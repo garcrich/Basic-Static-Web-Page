@@ -6,29 +6,43 @@ var logoToggle = document.getElementById('logo-toggle'),
     slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
-        'padding': 256,
+        'padding': 225,
         'tolerance': 70
-    }),
-    scrollTopAnimation = function () {
-        var cosParameter = window.scrollY / 2,
-            scrollCount = 0,
-            oldTimestamp = performance.now();
-    
-        function step(newTimestamp) {
-            scrollCount += Math.PI / (500 / (newTimestamp - oldTimestamp));
-            if (scrollCount >= Math.PI) window.scrollTo(0, 0);
-            if (window.scrollY === 0) return;
-            window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
-            oldTimestamp = newTimestamp;
-            window.requestAnimationFrame(step);
-        }
-        window.requestAnimationFrame(step);
-    };
+    });
 
-toggleButton.addEventListener('click', function () {
+function scrollTopAnimation() {
+    var cosParameter = window.scrollY / 2,
+        scrollCount = 0,
+        oldTimestamp = performance.now();
+
+    function step(newTimestamp) {
+        scrollCount += Math.PI / (500 / (newTimestamp - oldTimestamp));
+        if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+        if (window.scrollY === 0) return;
+        window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+        oldTimestamp = newTimestamp;
+        window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
+};
+
+function mobileNavToggle() {
     toggleButton.classList.toggle('transition-nav');
     slideout.toggle();
+}
+
+toggleButton.addEventListener('click', function () {
+    mobileNavToggle();
 });
+
+window.addEventListener("resize", function () {
+    clearTimeout(checkForOpenNav);
+    var checkForOpenNav = setTimeout(function() {
+        if (document.body.clientWidth >= 426 && document.documentElement.classList.contains('slideout-open')) {
+            mobileNavToggle();
+        }
+    },300)
+})
 
 logoToggle.onclick = function () {
     uk2GroupLogo.classList.remove('logo-hide');

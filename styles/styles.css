@@ -68,6 +68,9 @@ h1 {
     list-style: none;
     margin: 0;
 }
+.mobile-nav a {
+    text-decoration: inherit;
+}
 .mobile-nav li {
     color: #fff;
     padding: 20px 0 20px 10px;
@@ -109,10 +112,9 @@ h1 {
     color: #fff;
 }
 .hero-img {
-    background: url("../imgs/hero-bg.jpg") no-repeat center, linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
-    background: url("../imgs/hero-bg.jpg") no-repeat center, -moz-linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
-    background: url("../imgs/hero-bg.jpg") no-repeat center, -webkit-linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c48ac', endColorstr='#ebaf87', GradientType=1);
+    background: url("../imgs/hero-bg.jpg") no-repeat center, -moz-linear-gradient(-87deg, #523ea3 0%, #b15173, #b87243 100%);
+    background: url("../imgs/hero-bg.jpg") no-repeat center, -webkit-linear-gradient(-87deg, #523ea3 0%, #b15173, #b87243 100%);
+    background: url("../imgs/hero-bg.jpg") no-repeat center, linear-gradient(-87deg, #523ea3 0%, #b15173, #b87243 100%);
 }
 .container-wrapper {
     width: 95%;
@@ -138,6 +140,7 @@ h1 {
     padding-top: 10px;
 }
 @media screen and (min-width: 426px) {
+    
     .mobile-nav-icon {
         display: none;
    }
