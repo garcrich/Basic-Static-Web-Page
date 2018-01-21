@@ -1,185 +1,234 @@
 * {
-    font-family: 'Raleway', 'open-sans', sans-serif
+    font-family: 'Raleway', 'open-sans', sans-serif;
 }
-
-.full-width-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.full-width-wrapper-nav {
-    z-index: 1;
-    display: block;
-    background-color: #999
-}
-
-nav li {
-    width: 100%;
-    border-bottom:  2px solid #fff;
-    margin: 0;
-}
-
-.nav-container-wrapper {
-    width: 100%;
-}
-
-.container-wrapper {
-    width: 95%;
-    margin: 0 auto;
-}
-
 h1 {
     font-weight: 400;
 }
-
-.nav-items {
+.mobile-nav-icon div, .mobile-nav, .full-width-wrapper, .hero-header {
     padding: 0;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
-
-.nav-links a, .nav-login a {
-    text-decoration: none;
-    color: #fff;
+.slideout-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 256px;
+    min-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
     display: block;
 }
-
-.nav-links {
-    padding: 8px 0 8px 0;
+.slideout-menu-left {
+    left: 0;
 }
-
-.nav-login {
-    margin-left: auto;
-    background-color: #2f3191;
-    text-transform: uppercase;
-    padding: 0 33px;
-    border: none;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 12px;
+.slideout-menu-right {
+    right: 0;
+}
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    background-color: #FFF;
+    min-height: 100vh;
+}
+.slideout-open, .slideout-open body, .slideout-open .slideout-panel {
+    overflow: hidden;
+}
+.slideout-open .slideout-menu {
+    display: block;
+}
+.mobile-nav-icon {
+    position: absolute;
+    width: 32px;
+    padding: 15px 0 0 10px;
     cursor: pointer;
-    outline: none;
 }
-
-.nav-login:active {
-    background-color: #393ba8;
+.mobile-nav-icon div {
+    margin-bottom: 8px;
+    height: 2px;
+    background: #fff;
+    border-radius: 9px;
 }
-
-.logo-hide {
-    visibility: hidden;
+.mobile-nav div:first-child, .mobile-nav div:nth-child(2), .mobile-nav div:last-child {
+    transition: transform 235ms ease;
 }
-
-#logo-toggle:active {
-    color: #5b5dd6;
+.transition-nav div:first-child {
+    transform: translate(-5px, 4px) rotate(-35deg) scale(0.7, 1.5);
 }
-
+.transition-nav div:nth-child(2) {
+    transform: scale(0);
+}
+.transition-nav div:last-child {
+    transform: translate(-5px, -4px) rotate(35deg) scale(0.7, 1.5);
+}
+#menu {
+    background: rgb(39, 39, 39);
+}
+.mobile-nav {
+    list-style: none;
+    margin: 0;
+}
+.mobile-nav li {
+    color: #fff;
+    padding: 20px 0 20px 10px;
+    border-bottom: 1px solid white;
+}
+.mobile-login {
+    background-color: #2f3191;
+}
+.full-width-wrapper-nav {
+    display: none;
+}
+.full-width-wrapper, .container-wrapper {
+    margin: 0 auto;
+}
+.full-width-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
 #logo-toggle, #scrollToTop {
     text-decoration: underline;
     color: #2f3191;
     cursor: pointer;
 }
-
-.UK2Group-footer {
+#logo-toggle:active {
+    color: #5b5dd6;
+}
+.logo-hide {
+    visibility: hidden;
+}
+.hero, .UK2Group-footer {
     display: flex;
-    justify-content: space-between;
 }
-
-.container-h1 {
-    margin: 45px 0 40px;
-    font-weight: 500;
+.hero {
+    height: 201px;
+    align-items: center;
 }
-
+.hero-header {
+    margin-top: 50px;
+    color: #fff;
+}
 .hero-img {
     background: url("../imgs/hero-bg.jpg") no-repeat center, linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
     background: url("../imgs/hero-bg.jpg") no-repeat center, -moz-linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
     background: url("../imgs/hero-bg.jpg") no-repeat center, -webkit-linear-gradient(-87deg, #8d7eca 0%, #bd748d, #b98868 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c48ac', endColorstr='#ebaf87', GradientType=1);
 }
-
-.hero {
-    height: 350px;
-    display: flex;
-    align-items: center;
+.container-wrapper {
+    width: 95%;
+    padding-bottom: 30px;
 }
-
-.hero h1 {
-    padding: 0;
-    color: #fff;
+.container-h1 {
+    margin: 45px 0 40px;
+    font-weight: 500;
 }
 .container-btm-border {
     border-bottom: 1px solid grey;
 }
-.text-col-2 {
-    display: block;
+.text-col-2, .UK2Group-footer {
     justify-content: space-between;
+}
+.text-col-2 {
     line-height: 35px;
 }
-
 .UK2-Group-Logo img {
     width: 95%;
     height: auto;
     margin: 0 auto;
     padding-top: 10px;
 }
-
 @media screen and (min-width: 426px) {
-    
-    nav li {
-        border: none;
-    }
-
-    .nav-links {
-        padding: 8px 35px 8px 0;
-    }
-
-    .UK2-Group-Logo img {
-        width: auto;
-        height: auto;
-        margin: 0 auto;
-        padding-top: 10px;
-        padding-left: 5px;
-    }
-
+    .mobile-nav-icon {
+        display: none;
+   }
     .full-width-wrapper-nav {
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.2);
         position: absolute;
-        background: rgba(255, 255, 255, 0.2)
-    }
-    
-    nav {
+        display: flex;
+   }
+    .nav-container-wrapper {
+        width: 100%;
         padding: 20px 0;
-    }
-    
+   }
     .nav-items {
         display: flex;
-        flex-direction: row;
-    }
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+   }
+    .nav-links {
+        padding: 8px 0 8px 5px;
+   }
+    .nav-links a, .nav-login a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+   }
+    .UK2-Group-Logo img, .nav-login, .nav-items li {
+        width: auto;
+   }
+    .nav-items li {
+        border: none;
+        margin-left: 20px;
+   }
+    .nav-login {
+        margin-left: auto;
+        margin-right: 20px;
+        background-color: #2f3191;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 400;
+        font-size: 12px;
+        cursor: pointer;
+        outline: none;
+        padding: 0 33px;
+        border: none;
+        border-radius: 4px;
+   }
+    .nav-login:active {
+        background-color: #393ba8;
+   }
+    .UK2-Group-Logo img {
+        height: auto;
+        padding: 10px 0 0 5px;
+   }
+    .hero {
+        height: 275px;
+   }
+    .hero-header {
+        margin-top: 115px;
+   }
 }
-
 @media screen and (min-width: 777px) {
     .text-col-2 {
         display: flex;
         justify-content: space-between;
-    }
-
+   }
     .text-col-2 div {
         margin-right: 2.5%;
         padding-bottom: 30px;
-    }
-
+   }
     .UK2-Group-Logo img {
         width: 100;
         height: auto;
-    }
+   }
 }
-
-@media screen and (min-width: 961px) {
-    .container-wrapper {
+@media screen and (min-width: 1010px) {
+    .container-wrapper, .nav-container-wrapper {
         width: 960px;
         margin: 0 auto;
-    }
+   }
     .UK2-Group-Logo img {
-        padding-left:55px;
-    }
+        padding-left: 55px;
+   }
+    .nav-links:first-child {
+        margin-left: 0;
+   }
+    .nav-links:not(:first-child) {
+        margin-left: 25px;
+   }
+    .nav-login {
+        margin-right: 2.5%;
+   }
 }
