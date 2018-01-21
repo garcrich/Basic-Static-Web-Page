@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +8,119 @@
     <title>US2Group Website</title>
     <link rel="stylesheet" href="https://use.typekit.net/cgn3jez.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Page1</li>
-            <li>Page2</li>
-        </ul>
-    </nav>
-    <a href="">Login</a>
-    <div>
-        UK2Group Website
+    <div id="topOfPage" class="full-width-wrapper full-width-wrapper-nav">
+        <nav class="nav-container-wrapper">
+            <ul class=" nav-items">
+                <li class="nav-links">
+                    <a href="">Home</a>
+                </li>
+                <li class="nav-links">
+                    <a href="">Page1</a>
+                </li>
+                <li class="nav-links">
+                    <a href="">Page2</a>
+                </li>
+                
+                <button class="nav-login">
+                    <a href="">Login</a>
+                </button>
+            </ul>
+        </nav>
     </div>
-    <main>
-        <div>
-            <h1>Web Hosting Professionals</h1>
+
+    <div class="full-width-wrapper hero-img">
+        <div class="container-wrapper hero">
             <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet laudantium
-                    rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio necessitatibus nemo delectus impedit
-                    facere tenetur consectetur. Minima animi esse molestias. Harum, perspiciatis. Odit maxime eius, voluptatum
-                    dolorem, aut nam optio similique iusto expedita tempora in quis dignissimos deserunt? Odit, nemo obcaecati
-                    aspernatur expedita beatae at atque. At necessitatibus magni eaque nemo mollitia repellat neque ut provident
-                    nobis assumenda praesentium tempore accusantium facilis iste eius repudiandae quisquam, dolorem eos est?
-                    Quidem aspernatur perspiciatis quam aliquam doloribus pariatur.</p>
+                <h1 class="hero-header">UK2Group Website</h1>
             </div>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet laudantium
-                    rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio necessitatibus nemo delectus impedit
-                    facere tenetur consectetur. Minima animi esse molestias. Harum, perspiciatis. Odit maxime eius, voluptatum
-                    dolorem, aut nam optio similique iusto expedita tempora in quis dignissimos deserunt? Odit, nemo obcaecati
-                    aspernatur expedita beatae at atque. At necessitatibus magni eaque nemo mollitia repellat neque ut provident
-                    nobis assumenda praesentium tempore accusantium facilis iste eius repudiandae quisquam, dolorem eos est?
-                    Quidem aspernatur perspiciatis quam aliquam doloribus pariatur.</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="full-width-wrapper container-btm-border">
+            <div class="container-wrapper">
+                <h1 class="container-h1">Web Hosting
+                    <br/> Professionals</h1>
+                <div class="text-col-2">
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet
+                            laudantium rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio necessitatibus nemo
+                            delectus impedit facere tenetur consectetur nemo delectus.</p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet
+                            laudantium rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio necessitatibus nemo
+                            delectus impedit facere tenetur consectetur nemo delectus. </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div>
-            <h1>Customer Service Experts</h1>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet laudantium
-                    rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio necessitatibus nemo delectus impedit
-                    facere tenetur consectetur. Minima animi esse molestias. Harum, perspiciatis. Odit maxime eius, voluptatum
-                    dolorem, aut nam optio similique iusto expedita tempora in quis dignissimos deserunt? Odit, nemo obcaecati
-                    aspernatur expedita beatae at atque. At necessitatibus magni eaque nemo mollitia repellat neque ut provident
-                    nobis assumenda praesentium tempore accusantium facilis iste eius repudiandae quisquam, dolorem eos est?
-                    Quidem aspernatur perspiciatis quam aliquam doloribus pariatur. <a href="">See UK2 Group Logo</a></p>
-            </div>
-            <div>
-                <img src="imgs/uk2group-logo.png" alt="">
+        <div class="full-width-wrapper container-btm-border">
+            <div class="container-wrapper ">
+                <h1 class="container-h1">Customer Service
+                    <br/> Experts</h1>
+                <div class="text-col-2">
+                    <div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil provident inventore tempore, eveniet
+                            laudantium rerum sunt cupiditate ut amet et voluptatibus quaerat distinctio nemo
+                            delectus impedit facere tenetur consectetur. Minima animi esse molestias. Harum, perspiciatis.
+                            <span id="logo-toggle">See UK2 Group Logo</span>
+                        </p>
+                    </div>
+                    <div class="UK2-Group-Logo logo-hide">
+                        <img src="imgs/uk2group-logo.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer>
-        <p>UK2Group Footer</p>
-        <a href="">Back to Top</a>
-    </footer>
+
+    <div class="full-width-container">
+        <footer class="container-wrapper UK2Group-footer">
+            <p>UK2Group Footer</p>
+            <p>
+                <a id="scrollToTop">Back to Top &uarr;</a>
+            </p>
+        </footer>
+    </div>
 </body>
+
+<script>
+    var logoToggle = document.getElementById('logo-toggle');
+    var scrollToTop = document.getElementById('scrollToTop');
+    var uk2GroupLogo = document.querySelector('.UK2-Group-Logo');
+
+    logoToggle.onclick = function () {
+        uk2GroupLogo.classList.remove('logo-hide');
+        logoToggle.removeAttribute('id');
+    };
+
+    var scrollTopAnimation = function () {
+        var cosParameter = window.scrollY / 2,
+            scrollCount = 0,
+            oldTimestamp = performance.now();
+
+        function step(newTimestamp) {
+            scrollCount += Math.PI / (500 / (newTimestamp - oldTimestamp));
+            if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+            if (window.scrollY === 0) return;
+            window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+
+        window.requestAnimationFrame(step);
+    }
+
+    scrollToTop.addEventListener('click', scrollTopAnimation)
+
+
+
+</script>
 
 </html>
