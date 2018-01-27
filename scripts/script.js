@@ -1,4 +1,3 @@
-
 var logoToggle = document.getElementById('logo-toggle'),
     scrollToTop = document.getElementById('scrollToTop'),
     uk2GroupLogo = document.querySelector('.UK2-Group-Logo'),
